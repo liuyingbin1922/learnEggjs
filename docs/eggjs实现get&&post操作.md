@@ -35,12 +35,74 @@
     这里我还要补充一下使用egg-bin搭建的步骤：
 
     ```
+    $ mkdir eggpro
+    $ cd eggpro
+    $ npm init
+    $ npm i egg --save
+    $ npm i egg-bin --save-dev
+    ```
+
+    添加npm scripts 到package.json中；
 
     ```
+    {
+    "name": "egg-example",
+    "scripts": {
+            "dev": "egg-bin dev"
+        }
+    }
+    ```
+    上述就是使用egg-bin安装的过程。
+
+    走到这一步，有必要还给读者展示一下eggjs的工程目录，对eggjs有一个总体的认识:
+
+    ```
+    egg-pro
+    ├── package.json
+    ├── app.js (可选)
+    ├── agent.js (可选)
+    ├── app
+    |   ├── router.js
+    │   ├── controller
+    │   |   └── home.js
+    │   ├── service (可选)
+    │   |   └── user.js
+    │   ├── middleware (可选)
+    │   |   └── response_time.js
+    │   ├── schedule (可选)
+    │   |   └── my_task.js
+    │   ├── public (可选)
+    │   |   └── reset.css
+    │   ├── view (可选)
+    │   |   └── home.tpl
+    │   └── extend (可选)
+    │       ├── helper.js (可选)
+    │       ├── request.js (可选)
+    │       ├── response.js (可选)
+    │       ├── context.js (可选)
+    │       ├── application.js (可选)
+    │       └── agent.js (可选)
+    ├── config
+    |   ├── plugin.js
+    |   ├── config.default.js
+    │   ├── config.prod.js
+    |   ├── config.test.js (可选)
+    |   ├── config.local.js (可选)
+    |   └── config.unittest.js (可选)
+    └── test
+        ├── middleware
+        |   └── response_time.test.js
+        └── controller
+            └── home.test.js
+    ```
+
+    可以看到controller、middleware我们都还没有开始写，单元测试可以在写完代码之后对founction 进行测试。
+
+    这里我们先实现register接口，接口的函数是在controller中定义，通过router.js暴露给调用者，涉及到数据库的操作，在service层和model层进行实现。这个是主要的业务逻辑实现过程。
 
 - end:
 
-
+到了这里，eggpro的项目就可以在本地跑起来了，并实现了register和post的操作；
 
 
 
