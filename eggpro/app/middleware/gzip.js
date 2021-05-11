@@ -3,7 +3,7 @@
 // app/middleware/gzip.js
 const isJSON = require('koa-is-json');
 const zlib = require('zlib');
-
+// options 是中间件的配置项;
 module.exports = options => {
   return async function gzip(ctx, next) {
     await next();
