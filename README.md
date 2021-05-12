@@ -6,6 +6,8 @@
   作为一名前端工程师 ，在当前的技术环境下，不会node是一件很吃亏的事情，又因为平时学习egg.js , 文章都是发在公众号上，所以想在GitHub记录自己的学习笔记，为后面学习egg的同学提供素材。
 ****
 - body:
+  
+  ![eggjs实践](https://i.loli.net/2021/05/12/oUSKAjcaL65X1Gy.png)
 ### 目录：
 
 1.[使用eggjs跑通post/register接口](https://github.com/liuyingbin1922/learnEggjs/blob/main/docs/eggjs%E5%AE%9E%E7%8E%B0get%26%26post%E6%93%8D%E4%BD%9C.md)

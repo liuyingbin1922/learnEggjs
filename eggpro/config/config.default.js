@@ -23,7 +23,7 @@ module.exports = appInfo => {
     'gzip',
     'compress',
     'errorHandler',
-    'jwt',
+    // 'usingjwt',
   ];
   config.errorHandler = {
     match: '/topics',
@@ -52,9 +52,9 @@ module.exports = appInfo => {
     threshold: 2048,
   };
   // 配置koa-jwt 中间件;
-  config.jwt = {
-    secret: 'mysecret', // koa-jwt 中间件配置secret;
-  };
+  // config.usingjwt = {
+  //   secret: 'mysecret', // koa-jwt 中间件配置secret;
+  // };
   const userConfig = {
     myAppName: 'egg',
   };
